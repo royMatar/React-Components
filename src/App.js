@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import DynamicEvent from "./Components/DynamicEvent";
+import PassingProps from "./Components/PassingProps";
+import Fruits from "./Components/ManagingState/Fruits";
+import FruitsCounter from "./Components/ManagingState/FruitsCounter";
+import { useState } from "react";
+
+
 
 function App() {
+  const [fruits] = useState([
+    { fruitName: "apple", id: 1 },
+    { fruitName: "peach", id: 2 },
+    { fruitName: "apple", id: 3 },
+    { fruitName: "mango", id: 4 },
+  ]);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PassingProps firstName="Roy" lastName="Matar" />
+      <DynamicEvent />
+      <h1>Fruits:</h1>
+      <Fruits fruits={fruits} />
+      <FruitsCounter fruits={fruits} />
     </div>
   );
 }

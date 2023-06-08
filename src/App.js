@@ -4,12 +4,12 @@ import DynamicEvent from "./Components/DynamicEvent";
 import PassingProps from "./Components/PassingProps";
 import Fruits from "./Components/ManagingState/Fruits";
 import FruitsCounter from "./Components/ManagingState/FruitsCounter";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import YoutubeVideo from './Components/React-player/YoutubeVideo'
 import Songselection from './Components/SongSelection/SongSelection';
 import Calculator from "./Components/Calculator/Calculator";
 import List from "./Components/List/List";
-
+import { ThemeContext } from "./Components/light-dark theme/Context";
 function App() {
 
   const [fruits] = useState([
@@ -30,8 +30,10 @@ function App() {
     { name: "Chocolate Cake", calories: 400 },
   ];
 
+  const {theme, toggleTheme} = useContext(ThemeContext);
+
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <PassingProps firstName="Roy" lastName="Matar" />
       <DynamicEvent />
       <h1>Fruits:</h1>
@@ -41,6 +43,7 @@ function App() {
       <Songselection/>
       <Calculator/>
       <List desserts={desserts}/>
+      <button onClick={toggleTheme}>Toggle Theme</button>
     </div>
   );
 }

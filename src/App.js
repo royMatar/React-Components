@@ -8,8 +8,10 @@ import { useState } from "react";
 import YoutubeVideo from './Components/React-player/YoutubeVideo'
 import Songselection from './Components/SongSelection/SongSelection';
 import Calculator from "./Components/Calculator/Calculator";
+import List from "./Components/List/List";
 
 function App() {
+
   const [fruits] = useState([
     { fruitName: "apple", id: 1 },
     { fruitName: "peach", id: 2 },
@@ -21,6 +23,13 @@ function App() {
     { fruitName: "lemon", id: 8 },
   ]);
   
+  const desserts = [
+    { name: "Ice Cream", calories: 200 },
+    { name: "Tiramisu", calories: 300 },
+    { name: "Lemon Cake", calories: 600 },
+    { name: "Chocolate Cake", calories: 400 },
+  ];
+
   return (
     <div className="App">
       <PassingProps firstName="Roy" lastName="Matar" />
@@ -31,6 +40,7 @@ function App() {
       <YoutubeVideo/>
       <Songselection/>
       <Calculator/>
+      <List desserts={desserts}/>
     </div>
   );
 }

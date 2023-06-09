@@ -10,6 +10,8 @@ import Songselection from './Components/SongSelection/SongSelection';
 import Calculator from "./Components/Calculator/Calculator";
 import List from "./Components/List/List";
 import { ThemeContext } from "./Components/light-dark theme/Context";
+import GiftCard from "./Components/ManagingState2.jsx/GiftCard";
+
 function App() {
 
   const [fruits] = useState([
@@ -44,6 +46,7 @@ function App() {
       <Calculator/>
       <List desserts={desserts}/>
       <button onClick={toggleTheme}>Toggle Theme</button>
+      <GiftCard/>
     </div>
   );
 }

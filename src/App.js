@@ -11,6 +11,7 @@ import Calculator from "./Components/Calculator/Calculator";
 import List from "./Components/List/List";
 import { ThemeContext } from "./Components/light-dark theme/Context";
 import GiftCard from "./Components/ManagingState2.jsx/GiftCard";
+import TitleChange from "./Components/useEffect/TitleChange";
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
       <List desserts={desserts}/>
       <button onClick={toggleTheme}>Toggle Theme</button>
       <GiftCard/>
+      <TitleChange/>
     </div>
   );
 }

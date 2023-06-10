@@ -12,6 +12,7 @@ import List from "./Components/List/List";
 import { ThemeContext } from "./Components/light-dark theme/Context";
 import GiftCard from "./Components/ManagingState2.jsx/GiftCard";
 import TitleChange from "./Components/useEffect/TitleChange";
+import FetchingData from "./Components/FetchingData/FetchingData";
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
       <button onClick={toggleTheme}>Toggle Theme</button>
       <GiftCard/>
       <TitleChange/>
+      <FetchingData/>
     </div>
   );
 }

@@ -13,6 +13,7 @@ import { ThemeContext } from "./Components/light-dark theme/Context";
 import GiftCard from "./Components/ManagingState2.jsx/GiftCard";
 import TitleChange from "./Components/useEffect/TitleChange";
 import FetchingData from "./Components/FetchingData/FetchingData";
+import FetchingRandomUser from "./Components/FetchingRandomUser/FetchingRandomUser";
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
       <GiftCard/>
       <TitleChange/>
       <FetchingData/>
+      <FetchingRandomUser/>
     </div>
   );
 }

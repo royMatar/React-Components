@@ -15,6 +15,7 @@ import TitleChange from "./Components/useEffect/TitleChange";
 import FetchingData from "./Components/FetchingData/FetchingData";
 import FetchingRandomUser from "./Components/FetchingRandomUser/FetchingRandomUser";
 import Reducer from "./Components/useReducer/Reducer";
+import AccessDom from "./Components/useRef/AccessDom";
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
       <FetchingData/>
       <FetchingRandomUser/>
       <Reducer/>
+      <AccessDom/>
     </div>
   );
 }

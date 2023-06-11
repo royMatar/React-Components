@@ -14,6 +14,7 @@ import GiftCard from "./Components/ManagingState2.jsx/GiftCard";
 import TitleChange from "./Components/useEffect/TitleChange";
 import FetchingData from "./Components/FetchingData/FetchingData";
 import FetchingRandomUser from "./Components/FetchingRandomUser/FetchingRandomUser";
+import Reducer from "./Components/useReducer/Reducer";
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
       <TitleChange/>
       <FetchingData/>
       <FetchingRandomUser/>
+      <Reducer/>
     </div>
   );
 }

@@ -16,6 +16,7 @@ import FetchingData from "./Components/FetchingData/FetchingData";
 import FetchingRandomUser from "./Components/FetchingRandomUser/FetchingRandomUser";
 import Reducer from "./Components/useReducer/Reducer";
 import AccessDom from "./Components/useRef/AccessDom";
+import Radio from "./Components/RadioGroup/RadioGroup";
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
       <FetchingRandomUser/>
       <Reducer/>
       <AccessDom/>
+      <Radio/>
     </div>
   );
 }

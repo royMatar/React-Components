@@ -9,55 +9,55 @@ const withMousePosition = (WrappedComponent) => {
     useEffect(() => {
       const handleMousePositionChange = (e) => {
         setMousePosition({
-            x: e.clientX,
-            y: e.clientY,
-        })
+          x: e.clientX,
+          y: e.clientY,
+        });
       };
       window.addEventListener("mousemove", handleMousePositionChange);
       return () => {
         window.removeEventListener("mousemove", handleMousePositionChange);
       };
     }, []);
-    return <WrappedComponent {...props} mousePosition={mousePosition}/>
+    return <WrappedComponent {...props} mousePosition={mousePosition} />;
   };
 };
 
-const PanelMouseLogger = ({mousePosition})=>{
-    if(!mousePosition){
-        return null;
-    }
-    return(
-        <div>
-            <h2>Mouse Position:</h2>
-            <div>
-                <span>x: {mousePosition.x}</span>
-                <span> y: {mousePosition.y}</span>
-            </div>
-        </div>
-    )
-}
+const PanelMouseLogger = ({ mousePosition }) => {
+  if (!mousePosition) {
+    return null;
+  }
+  return (
+    <div>
+      <h2>Mouse Position:</h2>
+      <div>
+        <span>x: {mousePosition.x}</span>
+        <span> y: {mousePosition.y}</span>
+      </div>
+    </div>
+  );
+};
 
-const PointMouseLogger = ({mousePosition})=>{
-    if(!mousePosition){
-        return null;
-    }
-    return (
-        <p>
-            ({mousePosition.x}, {mousePosition.y})
-        </p>
-    )
-}
+const PointMouseLogger = ({ mousePosition }) => {
+  if (!mousePosition) {
+    return null;
+  }
+  return (
+    <p>
+      ({mousePosition.x}, {mousePosition.y})
+    </p>
+  );
+};
 
-const PanelMouseTracker=withMousePosition(PanelMouseLogger)
-const PointMouseTracker=withMousePosition(PointMouseLogger)
+const PanelMouseTracker = withMousePosition(PanelMouseLogger);
+const PointMouseTracker = withMousePosition(PointMouseLogger);
 
 function CursorPosition() {
   return (
     <div>
-        <PanelMouseTracker/>
-        <PointMouseTracker/>
+      <PanelMouseTracker />
+      <PointMouseTracker />
     </div>
-  )
+  );
 }
 
 export default CursorPosition;

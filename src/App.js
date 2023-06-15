@@ -18,6 +18,7 @@ import Reducer from "./Components/useReducer/Reducer";
 import AccessDom from "./Components/useRef/AccessDom";
 import Radio from "./Components/RadioGroup/RadioGroup";
 import CursorPosition from "./Components/CursorPosition/CursorPosition";
+import CursorPosition2 from "./Components/CursorPosition/CursorPosition2";
 
 function App() {
 
@@ -61,6 +62,7 @@ function App() {
       <AccessDom/>
       <Radio/>
       <CursorPosition/>
+      <CursorPosition2/>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const MousePosition = ({ render }) => {
   const [mousePosition, setMousePosition] = useState({
@@ -20,16 +20,17 @@ const MousePosition = ({ render }) => {
       window.removeEventListener("mousemove", handleMousePositionChange);
     };
   }, []);
+
   return render({ mousePosition });
 };
 
 const PanelMouseLogger = () => {
   return (
-    <div>
-      <p>Mouse Position: </p>
+    <div className="BasicTracker">
+      <h1>Mouse position:</h1>
       <MousePosition
         render={({ mousePosition }) => (
-          <div>
+          <div className="Row">
             <span>x: {mousePosition.x}</span>
             <span>y: {mousePosition.y}</span>
           </div>
@@ -52,11 +53,12 @@ const PointMouseLogger = () => {
 };
 
 function CursorPosition2() {
-  return;
-  <div>
-    <PanelMouseLogger />
-    <PointMouseLogger />
-  </div>;
+  return (
+    <div>
+      <PanelMouseLogger />
+      <PointMouseLogger />
+    </div>
+  );
 }
 
 export default CursorPosition2;

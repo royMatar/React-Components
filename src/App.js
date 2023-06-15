@@ -59,9 +59,9 @@ function App() {
       <FetchingData/>
       <FetchingRandomUser/>
       <Reducer/>
+      <CursorPosition/>
       <AccessDom/>
       <Radio/>
-      <CursorPosition/>
       <CursorPosition2/>
     </div>
   );

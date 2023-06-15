@@ -17,6 +17,7 @@ import FetchingRandomUser from "./Components/FetchingRandomUser/FetchingRandomUs
 import Reducer from "./Components/useReducer/Reducer";
 import AccessDom from "./Components/useRef/AccessDom";
 import Radio from "./Components/RadioGroup/RadioGroup";
+import CursorPosition from "./Components/CursorPosition/CursorPosition";
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
       <Reducer/>
       <AccessDom/>
       <Radio/>
+      <CursorPosition/>
     </div>
   );
 }

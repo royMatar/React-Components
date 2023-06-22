@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react'
+import {useReducer} from 'react'
 
 const reducer = (state,action)=>{
     if(action.type ==='buy') return {money: state.money - 10};

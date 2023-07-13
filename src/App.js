@@ -21,7 +21,6 @@ import CursorPosition from "./Components/CursorPosition/CursorPosition";
 import CursorPosition2 from "./Components/CursorPosition/CursorPosition2";
 import Pagination from "./Components/Pagination/CryptoList";
 import CryptoList from "./Components/Pagination/CryptoList";
-
 function App() {
   const [fruits] = useState([
     { fruitName: "apple", id: 1 },
